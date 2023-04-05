@@ -14,6 +14,10 @@
 		28973B7429C8ECED003F42F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28973B7229C8ECED003F42F0 /* Main.storyboard */; };
 		28973B7629C8ECEE003F42F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28973B7529C8ECEE003F42F0 /* Assets.xcassets */; };
 		28973B7929C8ECEE003F42F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28973B7729C8ECEE003F42F0 /* LaunchScreen.storyboard */; };
+		C0CC8C6529DD004300A0F186 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CC8C6429DD004200A0F186 /* HomeViewController.swift */; };
+		C0CC8C6729DD019D00A0F186 /* RecipeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CC8C6629DD019D00A0F186 /* RecipeTableCell.swift */; };
+		C0CC8C6929DD035400A0F186 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CC8C6829DD035400A0F186 /* Recipe.swift */; };
+		C0CC8C6B29DD054300A0F186 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CC8C6A29DD054300A0F186 /* RecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		28973B7529C8ECEE003F42F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28973B7829C8ECEE003F42F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28973B7A29C8ECEE003F42F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0CC8C6429DD004200A0F186 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C0CC8C6629DD019D00A0F186 /* RecipeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableCell.swift; sourceTree = "<group>"; };
+		C0CC8C6829DD035400A0F186 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		C0CC8C6A29DD054300A0F186 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 				28973B7729C8ECEE003F42F0 /* LaunchScreen.storyboard */,
 				28973B7A29C8ECEE003F42F0 /* Info.plist */,
 				282ECC8129CE1164008A75ED /* UserInformationViewController.swift */,
+				C0CC8C6429DD004200A0F186 /* HomeViewController.swift */,
+				C0CC8C6629DD019D00A0F186 /* RecipeTableCell.swift */,
+				C0CC8C6829DD035400A0F186 /* Recipe.swift */,
+				C0CC8C6A29DD054300A0F186 /* RecipeViewController.swift */,
 			);
 			path = RecipePal;
 			sourceTree = "<group>";
@@ -141,7 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CC8C6529DD004300A0F186 /* HomeViewController.swift in Sources */,
 				28973B7129C8ECED003F42F0 /* ViewController.swift in Sources */,
+				C0CC8C6929DD035400A0F186 /* Recipe.swift in Sources */,
+				C0CC8C6729DD019D00A0F186 /* RecipeTableCell.swift in Sources */,
+				C0CC8C6B29DD054300A0F186 /* RecipeViewController.swift in Sources */,
 				28973B6D29C8ECED003F42F0 /* AppDelegate.swift in Sources */,
 				282ECC8229CE1164008A75ED /* UserInformationViewController.swift in Sources */,
 				28973B6F29C8ECED003F42F0 /* SceneDelegate.swift in Sources */,
