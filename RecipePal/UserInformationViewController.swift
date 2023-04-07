@@ -9,13 +9,43 @@ import UIKit
 
 class UserInformationViewController: UIViewController {
 
+    var userInfoModel = UserInfoModel()
+    
+    
+    @IBOutlet weak var name: UITextField!
+    
+    @IBOutlet weak var emailAddress: UILabel!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBOutlet weak var confirmPassword: UITextField!
+    
+    var email: String = ""
+    var userInfo: UserInfo?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        email = userInfoModel.getCurrentSignedUser()
+        
+        userInfo = userInfoModel.fetchUserInfo(emailAddress: email)
+        
+        name.text = userInfo!.name
+        emailAddress.text = email
     }
     
-
+    @IBAction func onUpdateButtonPressed(_ sender: Any) {
+        
+        if (password.text == confirmPassword.text) {
+            userInfoModel.saveUserInfo(userName: name.text!, emailAddress: email, password: password.text!)
+        } else {
+            password.textColor = UIColor.red
+            confirmPassword.textColor = UIColor.red
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

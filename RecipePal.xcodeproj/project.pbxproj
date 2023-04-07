@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		282ECC8229CE1164008A75ED /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282ECC8129CE1164008A75ED /* UserInformationViewController.swift */; };
+		28633B2229DFE066008A040B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28633B2129DFE066008A040B /* SignUpViewController.swift */; };
+		28633B2429DFE2DB008A040B /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28633B2329DFE2DB008A040B /* UserInfoModel.swift */; };
 		28973B6D29C8ECED003F42F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28973B6C29C8ECED003F42F0 /* AppDelegate.swift */; };
 		28973B6F29C8ECED003F42F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28973B6E29C8ECED003F42F0 /* SceneDelegate.swift */; };
 		28973B7129C8ECED003F42F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28973B7029C8ECED003F42F0 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		282ECC8129CE1164008A75ED /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewController.swift; sourceTree = "<group>"; };
+		28633B2129DFE066008A040B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		28633B2329DFE2DB008A040B /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		28973B6929C8ECED003F42F0 /* RecipePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28973B6C29C8ECED003F42F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28973B6E29C8ECED003F42F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				C0CC8C6629DD019D00A0F186 /* RecipeTableCell.swift */,
 				C0CC8C6829DD035400A0F186 /* Recipe.swift */,
 				C0CC8C6A29DD054300A0F186 /* RecipeViewController.swift */,
+				28633B2129DFE066008A040B /* SignUpViewController.swift */,
+				28633B2329DFE2DB008A040B /* UserInfoModel.swift */,
 			);
 			path = RecipePal;
 			sourceTree = "<group>";
@@ -157,8 +163,10 @@
 				28973B7129C8ECED003F42F0 /* ViewController.swift in Sources */,
 				C0CC8C6929DD035400A0F186 /* Recipe.swift in Sources */,
 				C0CC8C6729DD019D00A0F186 /* RecipeTableCell.swift in Sources */,
+				28633B2429DFE2DB008A040B /* UserInfoModel.swift in Sources */,
 				C0CC8C6B29DD054300A0F186 /* RecipeViewController.swift in Sources */,
 				28973B6D29C8ECED003F42F0 /* AppDelegate.swift in Sources */,
+				28633B2229DFE066008A040B /* SignUpViewController.swift in Sources */,
 				282ECC8229CE1164008A75ED /* UserInformationViewController.swift in Sources */,
 				28973B6F29C8ECED003F42F0 /* SceneDelegate.swift in Sources */,
 			);

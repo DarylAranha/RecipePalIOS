@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nDI-M0-35U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nDI-M0-35U">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,7 +64,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Gan-0J-wh7" kind="show" id="sSl-2i-Brq"/>
+                                    <action selector="onLoginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XUb-Eg-jQL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,6 +74,11 @@
                     <navigationItem key="navigationItem" title="Login" id="soh-7U-pJf">
                         <barButtonItem key="backBarButtonItem" title="Login Page" id="y9w-z5-q8A"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailAddress" destination="ed7-5N-359" id="B3m-07-Eel"/>
+                        <outlet property="password" destination="Rc1-gK-9GH" id="loT-KY-fX0"/>
+                        <segue destination="Gan-0J-wh7" kind="show" identifier="HomeViewFromLogin" id="TCB-fp-84k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +87,7 @@
         <!--Sign Up-->
         <scene sceneID="a7c-Gw-d7v">
             <objects>
-                <viewController id="CIL-8u-haX" sceneMemberID="viewController">
+                <viewController id="CIL-8u-haX" customClass="SignUpViewController" customModule="RecipePal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3BW-tE-Ssn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,6 +126,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSignUpButtonPress:" destination="CIL-8u-haX" eventType="touchUpInside" id="fMt-o1-Vy7"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9m-91-K21">
                                 <rect key="frame" x="54" y="458" width="291" height="34"/>
@@ -132,6 +141,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="Cxz-n4-WdC"/>
+                    <connections>
+                        <outlet property="confirmPassword" destination="A9m-91-K21" id="Vt1-VQ-iRn"/>
+                        <outlet property="emailAddress" destination="r7a-ma-jic" id="5U4-o2-xXs"/>
+                        <outlet property="password" destination="RI9-YU-ibK" id="mqc-RO-9nc"/>
+                        <outlet property="userName" destination="Dov-LX-tHU" id="p04-R2-1gs"/>
+                        <segue destination="Gan-0J-wh7" kind="show" identifier="HomeViewFromSignup" id="0XN-nX-i5W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRj-Qv-4RJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,21 +158,15 @@
             <objects>
                 <viewController id="VyO-yA-llf" customClass="UserInformationViewController" customModule="RecipePal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LEW-8Q-iZ6">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="male" translatesAutoresizingMaskIntoConstraints="NO" id="6I5-mO-0B1">
-                                <rect key="frame" x="0.0" y="59" width="393" height="296"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="292"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XbR-wq-Sa8">
                                 <rect key="frame" x="16" y="442" width="361" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6nl-U4-bv5">
-                                <rect key="frame" x="16" y="509" width="361" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -179,9 +189,31 @@
                                 <color key="tintColor" red="0.95686274770000002" green="0.72941178080000002" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Update"/>
+                                <connections>
+                                    <action selector="onUpdateButtonPressed:" destination="VyO-yA-llf" eventType="touchUpInside" id="cKq-Zc-riG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HELLO!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnJ-Py-zsH">
                                 <rect key="frame" x="163" y="388" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fzu-Yd-mY4">
+                                <rect key="frame" x="0.0" y="758" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem title="Home" width="205.66667175292969" id="Yae-EO-PE4">
+                                        <connections>
+                                            <segue destination="Gan-0J-wh7" kind="show" id="9eK-gh-wJu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="User Info" width="245.66667175292969" id="sjh-ml-Ev2"/>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iB-kP-olV">
+                                <rect key="frame" x="16" y="510" width="361" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -191,10 +223,17 @@
                         <viewLayoutGuide key="safeArea" id="11I-DC-Blh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="63D-p3-GVA"/>
+                    <connections>
+                        <outlet property="confirmPassword" destination="QZL-tJ-afj" id="z6V-52-eLT"/>
+                        <outlet property="emailAddress" destination="0iB-kP-olV" id="8iY-aO-keC"/>
+                        <outlet property="name" destination="XbR-wq-Sa8" id="iP4-0a-ED0"/>
+                        <outlet property="password" destination="Ynf-m0-UH2" id="1rX-hT-enC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIs-xB-oku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2413" y="-2"/>
+            <point key="canvasLocation" x="2412.9770992366412" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n7p-Uk-n9b">
@@ -219,25 +258,25 @@
             <objects>
                 <viewController id="Gan-0J-wh7" customClass="HomeViewController" customModule="RecipePal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sHd-xS-mHl">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYh-gG-ASF">
-                                <rect key="frame" x="16" y="147" width="361" height="505"/>
+                                <rect key="frame" x="16" y="44" width="361" height="505"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="505" id="3No-ri-vW2"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeName" id="dhT-b1-4h1" customClass="RecipeTableCell" customModule="RecipePal" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="43.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="50" width="361" height="42.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dhT-b1-4h1" id="ezO-an-P1k">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="42.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1C-jb-Oqi">
-                                                    <rect key="frame" x="20" y="11" width="299" height="21"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="299" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -261,11 +300,14 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3t0-UC-A0Y">
-                                <rect key="frame" x="0.0" y="732" width="393" height="44"/>
+                                <rect key="frame" x="0.0" y="629" width="393" height="44"/>
                                 <items>
-                                    <barButtonItem title="Home" width="134.66666666666666" id="RGe-Ze-J20"/>
-                                    <barButtonItem title="Grocery List" width="129.66666666666666" id="vaf-q9-wKf"/>
-                                    <barButtonItem title="User Info" width="115.66666666666669" id="uek-pv-hwG"/>
+                                    <barButtonItem title="Home" width="205.66666666666666" id="RGe-Ze-J20"/>
+                                    <barButtonItem title="User Info" width="245.66666666666669" id="uek-pv-hwG">
+                                        <connections>
+                                            <segue destination="VyO-yA-llf" kind="show" id="FqC-Nz-56f"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -287,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yF-uP-LHN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733.5877862595419" y="755.63380281690149"/>
+            <point key="canvasLocation" x="1735" y="933"/>
         </scene>
         <!--Recipe View Controller-->
         <scene sceneID="KpV-Ya-k16">
@@ -300,9 +342,16 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Q-82-rXn">
                                 <rect key="frame" x="0.0" y="730" width="393" height="44"/>
                                 <items>
-                                    <barButtonItem title="Home" width="134.66667175292969" id="J7D-Rc-5Uo"/>
-                                    <barButtonItem title="Grocery List" width="129.66667175292969" id="dGq-N3-SA7"/>
-                                    <barButtonItem title="User Info" width="115.66666412353516" id="ef4-pW-gpo"/>
+                                    <barButtonItem title="Home" width="206.66667175292969" id="J7D-Rc-5Uo">
+                                        <connections>
+                                            <segue destination="Gan-0J-wh7" kind="show" id="CFU-4B-Ch3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="User Info" width="242.66666412353516" id="ef4-pW-gpo">
+                                        <connections>
+                                            <segue destination="VyO-yA-llf" kind="show" id="e2K-OS-WLZ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwv-0O-bd8">
@@ -358,6 +407,10 @@
             <point key="canvasLocation" x="2493.8931297709923" y="755.63380281690149"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9eK-gh-wJu"/>
+        <segue reference="FqC-Nz-56f"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="male" width="1300" height="1300"/>
         <systemColor name="labelColor">
